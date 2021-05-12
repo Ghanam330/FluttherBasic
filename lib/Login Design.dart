@@ -2,10 +2,10 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 class LoginDesign extends StatelessWidget {
-  var emailController=TextEditingController();
-  var passwordController=TextEditingController();
+  var emailController = TextEditingController();
+  var passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +16,7 @@ class LoginDesign extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: <Widget>[
                 Text(
                   'Login',
                   style: TextStyle(
@@ -29,7 +29,6 @@ class LoginDesign extends StatelessWidget {
                 ),
                 TextFormField(
                   controller: emailController,
-
                   keyboardType: TextInputType.emailAddress,
                   onFieldSubmitted: (String value) {
                     print(value);
@@ -50,7 +49,8 @@ class LoginDesign extends StatelessWidget {
                 TextFormField(
                   controller: passwordController,
                   keyboardType: TextInputType.visiblePassword,
-                  obscureText: true,   //  بتخفي الرقم السري
+                  obscureText: true,
+                  //  بتخفي الرقم السري
                   onFieldSubmitted: (String value) {
                     print(value);
                   },
@@ -70,15 +70,18 @@ class LoginDesign extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   color: Colors.blue,
-                  child: MaterialButton(onPressed: () {
-
-                    print(emailController.text);
-                    print(passwordController.text);
-                  },
+                  child: MaterialButton(
+                    onPressed: () {
+                      print(emailController.text);
+                      print(passwordController.text);
+                    },
                     child: Text(
                       'Login',
                       style: TextStyle(
+                        //  color: Color.fromRGBO(255, 255,0,0.5),
+                        //color: Color.fromARGB(255, 255,0,0),
                         color: Colors.white,
+                        // color:Color(0xffffffff),
                       ),
                     ),
                   ),
@@ -91,13 +94,8 @@ class LoginDesign extends StatelessWidget {
                   children: [
                     Text(
                       'Don\'t have an account',
-
                     ),
-                    TextButton(onPressed: (){
-
-                    }, child: Text(
-                      'Register Now'
-                    )),
+                    TextButton(onPressed: () {}, child: Text('Register Now')),
                   ],
                 ),
               ],
