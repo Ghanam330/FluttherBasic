@@ -22,6 +22,17 @@ class LoginDesign extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0,
+                    letterSpacing: 2, // مسافاه بين الحروف
+                    wordSpacing: 30, // بتعمل فراغات بين الكلمه
+
+                    shadows: <Shadow>[
+                      Shadow(
+                        offset: Offset(10.0,10.0),
+                      color:  Colors.blue,
+                      ),
+                    ],
+                    decoration: TextDecoration.overline, // بتعمل خط تحت ال text
+
                   ),
                 ),
                 SizedBox(
@@ -60,7 +71,9 @@ class LoginDesign extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: 'password',
                     labelText: 'Password',
-                    suffixIcon: Icon(Icons.remove_red_eye),
+                    suffixIcon: Icon(
+                        Icons.remove_red_eye
+                    ),
                     border: OutlineInputBorder(),
                   ),
                 ),
