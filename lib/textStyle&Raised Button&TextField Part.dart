@@ -19,6 +19,9 @@ class _designState extends State<design> {
       title: Text('welcome'),
     ),
       body: Container(
+
+        margin: EdgeInsets.all(20),
+        
         alignment: Alignment.center,
         child: Column(
           children: <Widget>[

@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:flutterbasic/modules/login/Login%20Design.dart';
 import 'package:flutterbasic/textStyle&Raised%20Button&TextField%20Part.dart';
 
 void main() {
@@ -11,20 +12,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,//   بتشتال العلامه الي علي toolbar
-      home:
+      debugShowCheckedModeBanner: false, //   بتشتال العلامه الي علي toolbar
+      home: LoginDesign(),
 
-          design(),
-       // CounterScreen()
+      // design(),
+      // CounterScreen()
       //UserScreen(),
       //MessengerScreen()
-      //LoginDesign(),
       //HomeScreen4(),
       //HomeClass3(),
       //HomeScreen1(),
       //HomeScreen(),
       //MyHomePage(title: 'Ahmed'),
-
     );
   }
 }
